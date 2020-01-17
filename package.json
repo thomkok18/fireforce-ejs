@@ -1,0 +1,27 @@
+{
+  "name": "confrenceapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thom Kok",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dateformat": "^3.0.3",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mysql2": "^2.0.2",
+    "password-hash": "^1.2.2",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.24.4"
+  }
+}

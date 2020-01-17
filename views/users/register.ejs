@@ -1,0 +1,24 @@
+<%- include('../partials/header'); %>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">Registreren</div>
+                    <div class="card-body">
+                        <form class="d-flex flex-column" action="<%= prefix %>/register" method="post">
+                            <input type="text" name="firstname" placeholder="voornaam">
+                            <input type="text" name="inserts" placeholder="tussenvoegsels">
+                            <input type="text" name="lastname" placeholder="achternaam">
+                            <input type="text" name="email" placeholder="email">
+                            <input type="tel" name="tel" max="10" placeholder="0612345678">
+                            <input type="password" name="pincode" placeholder="pincode">
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('../partials/footer'); %>

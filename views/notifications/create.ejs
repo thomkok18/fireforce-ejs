@@ -1,0 +1,27 @@
+<%- include('../partials/header'); %>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">Melding maken</div>
+                    <div class="card-body">
+                        <form class="d-flex flex-column" action="<%= prefix %>/notification" method="post">
+                            <input type="text" name="what" placeholder="wat">
+                            <input type="text" name="where" placeholder="waar">
+                            <input type="text" name="who" placeholder="wie">
+                            <input type="tel" name="tel" max="10" placeholder="0612345678">
+                            <select name="place">
+                                <% locations.forEach(function(location) { %>
+                                    <option value="<%= location.id %>"><%= location.city %></option>
+                                <% }); %>
+                            </select>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('../partials/footer'); %>
