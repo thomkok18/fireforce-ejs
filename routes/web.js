@@ -23,4 +23,7 @@ router.get('/notification', notificationController.getNotification);
 router.get('/notification/create', notificationController.getCreateNotification);
 router.post('/notification', notificationController.postNotification);
 
+// Admin
+router.get('/admin', userController.getAdminInterface);
+
 module.exports = router;
