@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Notification = sequelize.define('Notification', {
     what: DataTypes.STRING,
-    where: DataTypes.STRING,
+    location: DataTypes.STRING,
     who: DataTypes.STRING,
     tel: DataTypes.STRING,
     locationId: DataTypes.INTEGER
