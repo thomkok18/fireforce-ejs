@@ -20,7 +20,7 @@ module.exports = {
       what: {
         type: Sequelize.STRING
       },
-      where: {
+      location: {
         type: Sequelize.STRING
       },
       who: {
