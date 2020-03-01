@@ -1,20 +1,23 @@
 <%- include('../partials/header'); %>
 <main>
     <div class="container">
+        <a href="<%= prefix %>/notification/create">Maak melding aan</a>
         <div class="row">
-            <div class="col-12">
-                <a href="<%= prefix %>/notification/create">Maak melding aan</a>
+            <% if (locals.notifications) { %>
                 <% notifications.forEach(function(notification) { %>
-                    <div class="card">
-                        <div class="card-header"></div>
-                        <div class="card-body">
-                            <%= notification.who %>
-                            <%= notification.what %>
-                            <%= notification.where %>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <%= notification.what %>
+                            </div>
+                            <div class="card-body">
+                                <%= notification.who %>
+                                <%= notification.location %>
+                            </div>
                         </div>
                     </div>
                 <% }); %>
-            </div>
+            <% } %>
         </div>
     </div>
 </main>
