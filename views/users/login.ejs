@@ -1,14 +1,15 @@
 <%- include('../partials/header'); %>
 <main>
     <div class="container">
+        <%- include('../partials/notification'); %>
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">Inloggen</div>
                     <div class="card-body">
                         <form class="d-flex flex-column" action="<%= prefix %>/login" method="post">
-                            <input type="text" name="email" placeholder="email">
-                            <input type="password" name="pincode" placeholder="pincode">
+                            <input type="text" name="email" placeholder="email" required>
+                            <input type="password" name="pincode" placeholder="pincode" required>
                             <input type="submit">
                         </form>
                     </div>
