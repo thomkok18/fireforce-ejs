@@ -1,23 +1,23 @@
+const {auth, adminAuth} = require("../helpers/auth");
 const models = require("../models");
 
-exports.getNotification = (req, res, next) => {
-    models.Location.findAll().then(locations => {
-        models.Notification.findAll().then(notifications => {
-            console.log(notifications);
-            res.render('notifications/index', {
-                notifications: notifications,
-                locations: locations
-            });
-        }).catch(err => {
-            console.log(err);
-        });
+exports.getNotification = async (req, res, next) => {
+    auth(req, res);
+
+    const locations = await models.Location.findAll();
+    const notifications = await models.Notification.findAll();
+
+    return res.render('notifications/index', {
+        notifications: notifications,
+        locations: locations
     });
 };
 
 exports.getCreateNotification = (req, res, next) => {
+    auth(req, res);
+
     models.Location.findAll().then(locations => {
-        console.log(locations);
-        res.render('notifications/create', {
+        return res.render('notifications/create', {
             locations: locations
         });
     }).catch(err => {
@@ -26,15 +26,17 @@ exports.getCreateNotification = (req, res, next) => {
 };
 
 exports.postNotification = (req, res, next) => {
+    auth(req, res);
+
     const what = req.body.what;
-    const where = req.body.where;
+    const where = req.body.location;
     const who = req.body.who;
     const tel = req.body.tel;
     const place = req.body.place;
 
     models.Notification.create({
         what: what,
-        where: where,
+        location: where,
         who: who,
         tel: tel,
         locationId: place,
