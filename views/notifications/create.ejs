@@ -1,6 +1,7 @@
 <%- include('../partials/header'); %>
 <main>
     <div class="container">
+        <%- include('../partials/notification'); %>
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -8,7 +9,7 @@
                     <div class="card-body">
                         <form class="d-flex flex-column" action="<%= prefix %>/notification" method="post">
                             <input type="text" name="what" placeholder="wat">
-                            <input type="text" name="where" placeholder="waar">
+                            <input type="text" name="location" placeholder="waar">
                             <input type="text" name="who" placeholder="wie">
                             <input type="tel" name="tel" max="10" placeholder="0612345678">
                             <select name="place">
