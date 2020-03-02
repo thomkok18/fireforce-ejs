@@ -38,6 +38,10 @@ hr {
   display: block;
 }
 
+.navbar-toggler-icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABNAQMAAAARq5ElAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAABtJREFUKM9jwA3s/8PBgYHhjILRKBlSYBDHDwBGl0jGf65d9AAAAABJRU5ErkJggg==");
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
