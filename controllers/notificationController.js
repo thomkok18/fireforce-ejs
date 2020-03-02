@@ -41,9 +41,8 @@ exports.postNotification = (req, res, next) => {
         tel: tel,
         locationId: place,
     }).then(result => {
-        console.log('Melding aangemaakt');
+        return res.redirect('/notification');
     }).catch(err => {
         console.log(err);
     });
-    return res.redirect('/notification');
 };
