@@ -1,7 +1,7 @@
 {
-  "name": "confrenceapp",
+  "name": "fireforce-ejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Start database server\r 2. Start application with ``nodemon``\r 3. Go to localhost:3000",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +23,13 @@
   "devDependencies": {
     "cssnano": "^4.1.10",
     "sass": "^1.26.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomkok18/fireforce-ejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thomkok18/fireforce-ejs/issues"
+  },
+  "homepage": "https://github.com/thomkok18/fireforce-ejs#readme"
 }
